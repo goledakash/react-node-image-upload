@@ -19,11 +19,11 @@ app.post('/submitImageAPI', (req, res) => {
     // filter the values
 
     axios.post('https://imagehasbeenverified.example.endpoint', values)
-      .then(function (response) {
+      .then((response) => {
         console.log('AXIOS SUCCESS',response);
         res.status(200).send({message: 'Image submitted'})
       })
-      .catch(function (error) {
+      .catch((error) => {
         console.log('AXIOS ERROR', error);
         res.status(500).send({message: 'Server error'})
       });
